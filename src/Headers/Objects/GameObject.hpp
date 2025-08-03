@@ -12,7 +12,7 @@ int frames, index, speed, frameWidth, frameHeight, currentFrame;
 Clock ticks;
 public:
     Texture tex = Texture("Textures/1.png");
-    Sprite sprite = Sprite(tex, IntRect({0, 0}, {tex.getSize().x, tex.getSize().y}));
+    Sprite sprite = Sprite(tex, IntRect({0, 0}, {(int)tex.getSize().x, (int)tex.getSize().y}));
     RectangleShape collisionbox;
     vector<Wall> walls;
     sf::Vector2f position;
