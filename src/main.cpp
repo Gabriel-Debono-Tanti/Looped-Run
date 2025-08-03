@@ -18,7 +18,7 @@ using namespace std;
 using namespace sf;
 int main()
 {
-    auto window = RenderWindow(VideoMode({1920u, 1080u}), "CMake SFML Project");
+    auto window = RenderWindow(VideoMode({1920u, 1080u}), "Looped Run");
    window.setFramerateLimit(144);
     vector<Scene*> scenes = { new MainScene, new LevelSel, new Level1, new Level2, new Level3, new Level4, new Level5, new Level6, new Level7, new Level8};
     Scene* currentscene = scenes[currentscene->index];
