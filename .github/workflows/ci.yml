@@ -34,6 +34,11 @@ jobs:
 
     - name: Configure
       run: cmake -B build ${{matrix.platform.flags}} ${{matrix.config.flags}}
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ matrix.platform.name }} ${{ matrix.config.name }}
+        path: ./build
 
     - name: Build
       run: cmake --build build --config Release
